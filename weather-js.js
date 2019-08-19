@@ -91,8 +91,9 @@
 			let hours = nyTime.getHours();
 			if (hours >= 20 || hours <= 7 && data.cities[city].current[0].condition !== 'Cloudy') {
 				body.classList.add('darkmode');
+				condition = '<p>The condition is: <strong>Nighttime / Clear</strong></p>';
 				currentDiv.innerHTML =  temp + condition;
-				document.querySelector("#current p strong").innerHTML = 'Nighttime / Clear';
+				currentDiv.classList.add('nighttime');
 			} else if (hours <= 20 && hours >= 7 && data.cities[city].current[0].condition == 'Cloudy') {
 				body.classList.add('cloudy');
 			} else if (hours <= 20 && hours >= 7 && data.cities[city].current[0].condition !== 'Cloudy') {
