@@ -37,16 +37,16 @@ label {
 	margin-left: .5rem;
 }
 #current.sunny p:last-child:after {
-	background-image: url('/portfolio/projects/svg/sunny.svg');
+	background-image: url('/Weather-App/svg/sunny.svg');
 }
 #current.cloudy-h p:last-child:after {
-	background-image: url('/portfolio/projects/svg/cloudy.svg');
+	background-image: url('/Weather-App/svg/cloudy.svg');
 }
-#current.rainy p:last-child:after {
-	background-image: url('/portfolio/projects/svg/rainy.svg');
+#current.nighttime p:last-child:after {
+	background-image: url('/Weather-App/svg/night.svg');
 }
 #current.partly-sunny p:last-child:after, #current.partly-cloudy p:last-child:after {
-	background-image: url('/portfolio/projects/svg/partlycloudy.svg');
+	background-image: url('/Weather-App/svg/partlycloudy.svg');
 }
 #forecast p {
 	margin: 1.25rem 0 0 1rem;
@@ -83,13 +83,13 @@ label {
 	font-style: inherit;
 }
 .day {
-	background-image: url("/portfolio/projects/jpg/day.jpg");
+	background-image: url("/Weather-App/jpg/day.jpg");
 }
 .darkmode {
-	background-image: url("/portfolio/projects/jpg/night.jpg");
+	background-image: url("/Weather-App/jpg/night.jpg");
 }
 .cloudy {
-	background-image: url("/portfolio/projects/jpg/cloudy.jpg");
+	background-image: url("/Weather-App/jpg/cloudy.jpg");
 }
 @media only screen and (min-width: 47rem) {
 	#container {
