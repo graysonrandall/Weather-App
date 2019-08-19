@@ -65,7 +65,7 @@ label {
 #forecast li.current-day {
 	border: 1px solid #fff;
   padding: 0 1rem;
-	margin: 1.2rem 0;
+	margin: 2.2rem 0 1.2rem;
 }
 #forecast span {
 	display: block;
