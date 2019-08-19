@@ -84,6 +84,10 @@
 			} else if (data.cities[city].current[0].condition == 'Cloudy') {
 				currentDiv.innerHTML =  temp + condition;
 				currentDiv.classList.add('cloudy-h');
+			} else if (hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Sunny' || hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Partly Sunny' || hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Partly Cloudy' || hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Cloudy') {
+				condition = '<p><strong>Nighttime/strong></p>';
+				currentDiv.innerHTML =  temp + condition;
+				currentDiv.classList.add('nighttime');
 			} else if (data.cities[city].current[0].condition == 'Rainy') {
 				currentDiv.innerHTML =  temp + condition;
 				currentDiv.classList.add('rainy');
