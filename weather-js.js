@@ -63,18 +63,6 @@
 		//Display current temp and condition and set night mode or cloudy mode
 		function displayCurrent() {
 
-			//darkmode
-			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-			nyTime = new Date(nyTime);
-			let hours = nyTime.getHours();
-			if (hours >= 20 || hours <= 7 && data.cities[city].current[0].condition !== 'Cloudy') {
-				body.classList.add('darkmode');
-			} else if (hours <= 20 && hours >= 7 && data.cities[city].current[0].condition == 'Cloudy') {
-				body.classList.add('cloudy');
-			} else if (hours <= 20 && hours >= 7 && data.cities[city].current[0].condition !== 'Cloudy') {
-				body.classList.add('day');
-			}
-
 			let temp = '<p>' + 'It is ' + '<strong>' + data.cities[city].current[0].temp + '&deg;' + '</strong>' + ' outside now' + '</p>';
 			let condition = '<p>' + 'The condition is: ' + '<strong>' + data.cities[city].current[0].condition + '</strong>' + '</p>';
 
@@ -84,10 +72,6 @@
 			} else if (data.cities[city].current[0].condition == 'Cloudy') {
 				currentDiv.innerHTML =  temp + condition;
 				currentDiv.classList.add('cloudy-h');
-			} else if (hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Sunny' || hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Partly Sunny' || hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Partly Cloudy' || hours >= 20 || hours <= 7 && data.cities[city].current[0].condition == 'Cloudy') {
-				condition = '<p><strong>Nighttime/strong></p>';
-				currentDiv.innerHTML =  temp + condition;
-				currentDiv.classList.add('nighttime');
 			} else if (data.cities[city].current[0].condition == 'Rainy') {
 				currentDiv.innerHTML =  temp + condition;
 				currentDiv.classList.add('rainy');
@@ -99,6 +83,20 @@
 				currentDiv.classList.add('partly-cloudy');
 			} else {
 				currentDiv.innerHTML =  temp + condition;
+			}
+
+			//darkmode
+			let nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+			nyTime = new Date(nyTime);
+			let hours = nyTime.getHours();
+			if (hours >= 20 || hours <= 7 && data.cities[city].current[0].condition !== 'Cloudy') {
+				body.classList.add('darkmode');
+				currentDiv.innerHTML =  temp + condition;
+				document.querySelector("#current p strong").innerHTML = 'Nighttime / Clear';
+			} else if (hours <= 20 && hours >= 7 && data.cities[city].current[0].condition == 'Cloudy') {
+				body.classList.add('cloudy');
+			} else if (hours <= 20 && hours >= 7 && data.cities[city].current[0].condition !== 'Cloudy') {
+				body.classList.add('day');
 			}
 		}
 
