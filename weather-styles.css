@@ -36,33 +36,33 @@ label {
 	margin-top: -.2rem;
 	margin-left: .5rem;
 }
-#current.sunny p:last-child:after {
+.sunny p:last-child:after {
 	background-image: url('/Weather-App/svg/sunny.svg');
 }
-#current.cloudy-h p:last-child:after {
+.cloudy-h p:last-child:after {
 	background-image: url('/Weather-App/svg/cloudy.svg');
 }
-#current.nighttime p:last-child:after {
+.nighttime p:last-child:after {
 	background-image: url('/Weather-App/svg/night.svg');
 }
-#current.partly-sunny p:last-child:after, #current.partly-cloudy p:last-child:after {
+.partly-sunny p:last-child:after, .partly-cloudy p:last-child:after {
 	background-image: url('/Weather-App/svg/partlycloudy.svg');
 }
 #forecast p {
 	margin: 1.25rem 0 0 1rem;
 }
-#forecast ul {
+ul {
 	margin-top: 0;
 	padding-left: 0;
 	list-style-type: none;
 }
-#forecast li {
+li {
 	border-bottom: 1px solid #fff;
   align-items: center;
   display: flex;
   padding: 0 0 0 1rem;
 }
-#forecast li.current-day {
+li.current-day {
 	border: 1px solid #fff;
   padding: 0 1rem;
 	margin: 2.2rem 0 1.2rem;
@@ -73,11 +73,11 @@ label {
   font-size: .8rem;
 	font-style: italic;
 }
-#forecast ul img {
+ul img {
 	max-width: 3rem;
 	display: inline-block;
 }
-#forecast .forecast-title {
+.forecast-title {
 	margin: 2.5rem 0 .5rem;
 	font-weight: bold;
 	font-style: inherit;
